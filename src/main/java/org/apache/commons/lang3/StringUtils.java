@@ -8784,7 +8784,7 @@ public class StringUtils {
      * @return the trimmed string, {@code null} if null String input
      */
     public static String trim(final String str) {
-        return str == null ? null : str.trim();
+        return str == null ? null : str.replaceAll("\\p{C}", "").trim();
     }
 
     /**
